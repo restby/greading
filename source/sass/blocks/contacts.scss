@@ -1,0 +1,11 @@
+.contacts__title {
+  margin-bottom: 20px;
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 17px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+}

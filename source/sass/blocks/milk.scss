@@ -1,0 +1,35 @@
+.milk__input[type="radio"]:checked + .control__mark-radio {
+  border-color: var(--base-primary);
+
+  &::before {
+    background-color: var(--base-primary);
+  }
+}
+
+.milk__input[type="radio"]:disabled + .control__mark-radio {
+  border-color: var(--base-light-grey);
+}
+
+.milk__input[type="radio"]:disabled:checked + .control__mark-radio {
+  border-color: var(--base-light-grey);
+
+  &::before {
+    background-color: var(--base-light-grey);
+  }
+}
+
+.milk__input[type="radio"]:focus + .control__mark-radio {
+  border-color: var(--base-primary-lighter);
+
+  &::before {
+    background-color: rgba(#7859cf, 0.25);
+  }
+}
+
+.milk__input[type="radio"]:focus:checked + .control__mark-radio {
+  border-color: var(--base-primary);
+
+  &::before {
+    background-color: var(--base-primary);
+  }
+}

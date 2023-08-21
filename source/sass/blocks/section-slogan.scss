@@ -1,0 +1,13 @@
+.section-slogan {
+  margin: 0;
+  color: var(--base-black);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}

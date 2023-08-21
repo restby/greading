@@ -1,0 +1,23 @@
+.country__input[type="checkbox"]:checked + .control__mark-checkbox {
+  background-color: var(--base-primary);
+  border-color: var(--base-primary);
+
+  &::before {
+    left: 18px;
+    background-color: var(--base-white);
+  }
+}
+
+.country__input[type="checkbox"]:disabled + .control__mark-checkbox {
+  background-color: var(--base-light-grey);
+  border-color: var(--base-light-grey);
+}
+
+.country__input[type="checkbox"]:disabled:checked + .control__mark-checkbox {
+  background-color: var(--base-light-grey);
+  border-color: var(--base-light-grey);
+
+  &::before {
+    background-color: var(--base-grey);
+  }
+}

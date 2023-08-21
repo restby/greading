@@ -1,0 +1,135 @@
+.range__scale {
+  width: 100%;
+  position: relative;
+  height: 2px;
+  margin-bottom: 36px;
+  background-color: var(--base-light-grey);
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 34px;
+  }
+}
+
+.range__bar {
+  width: 241px;
+  position: absolute;
+  z-index: 3;
+  left: 12px;
+  height: 4px;
+  background-color: var(--base-primary-lighter);
+
+  &--disabled {
+    background-color: var(--base-grey);
+  }
+
+  @media (min-width: 768px) {
+    width: 179px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 274px;
+  }
+}
+
+.range__toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  &--min {
+    transform: translateX(-12px) translateY(-10px);
+  }
+
+  &--max {
+    transform: translateX(229px) translateY(-10px);
+
+    @media (min-width: 768px) {
+      transform: translateX(167px) translateY(-10px);
+    }
+
+    @media (min-width: 1440px) {
+      transform: translateX(262px) translateY(-10px);
+    }
+  }
+
+  &:disabled {
+    border-color: var(--base-grey);
+  }
+
+  &:not(:disabled):active span.range__mark::before {
+    background-color: var(--base-primary);
+  }
+
+  &:focus {
+    @media (min-width: 768px) {
+      outline: none;
+    }
+  }
+}
+
+.range__wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 2px;
+    background-color: var(--base-grey);
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.range__input {
+  width: 118px;
+  height: 40px;
+  border: 2px solid var(--base-primary-lighter);
+  border-radius: 4px;
+  padding: 8px 10px;
+  color: var(--base-black);
+  background-color: var(--base-white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  appearance: textfield;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    width: 87px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 134px;
+  }
+
+  &::placeholder {
+    color: var(--base-grey);
+    opacity: 1;
+  }
+
+  &:disabled {
+    color: var(--base-grey);
+    border-color: var(--base-light-grey);
+    background-color: var(--bg-lightest-grey);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--base-primary-darker);
+  }
+}

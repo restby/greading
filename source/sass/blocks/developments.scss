@@ -1,0 +1,40 @@
+.developments {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--base-grey);
+}
+
+.developments__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.developments__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3px;
+  color: inherit;
+  text-decoration: none;
+
+  &--disabled {
+    color: var(--base-grey);
+  }
+
+  &:not(.developments__link--disabled):focus,
+  &:not(.developments__link--disabled):hover {
+    @media (min-width: 768px) {
+      color: var(--base-primary);
+    }
+  }
+
+  &:not(.developments__link--disabled):active {
+    color: var(--base-primary-darker);
+    outline: none;
+  }
+}
+
+.developments__icon {
+  margin-left: 4px;
+}

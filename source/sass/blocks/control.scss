@@ -1,0 +1,84 @@
+.control {
+  cursor: pointer;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+
+  &__input[type="button"]:not(:disabled):not(:active):focus > .control__mark,
+  &__input[type="button"]:not(:disabled):not(:active):hover > .control__mark {
+    @media (min-width: 768px) {
+      border-color: var(--base-primary-lighter);
+
+      &::before {
+        background-color: rgba(#7859cf, 0.25);
+      }
+    }
+  }
+
+  &:focus .control__input[type="radio"]:not(:disabled):not(:checked) + .control__mark-radio,
+  &:hover .control__input[type="radio"]:not(:disabled):not(:checked) + .control__mark-radio {
+    @media (min-width: 768px) {
+      border-color: var(--base-primary-lighter);
+
+      &::before {
+        background-color: rgba(#7859cf, 0.25);
+      }
+    }
+  }
+
+  &:focus .control__input[type="checkbox"]:not(:disabled):not(:checked) + .control__mark-checkbox,
+  &:hover .control__input[type="checkbox"]:not(:disabled):not(:checked) + .control__mark-checkbox {
+    @media (min-width: 768px) {
+      border: 2px solid var(--base-primary-lighter);
+      background-color: rgba(#7859cf, 0.25);
+    }
+  }
+}
+
+.control__mark,
+.control__mark-radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: var(--base-white);
+  border: 2px solid var(--base-grey);
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: var(--base-white);
+  }
+}
+
+.control__mark {
+  border-color: var(--base-primary-lighter);
+}
+
+.control__mark-checkbox {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  border: 2px solid var(--base-grey);
+  background-color: var(--base-grey);
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: var(--base-white);
+  }
+}
